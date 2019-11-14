@@ -16,7 +16,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.societegenerale.employeeportal.entity.Employee;
-import com.societegenerale.employeeportal.entity.Sex;
 import com.societegenerale.employeeportal.repository.EmployeeRepository;
 import com.societegenerale.employeeportal.service.EmployeeService;
 
@@ -40,7 +39,7 @@ public class EmployeeServiceIntegrationTest {
 	
 	@Before
 	public void setUp() {
-		Employee gaurav = new Employee("Gaurav", "Upadhyay", Sex.MALE, new Date(System.currentTimeMillis()), "IT");
+		Employee gaurav = new Employee("Gaurav", "Upadhyay", "male", new Date(System.currentTimeMillis()), "IT");
 		gaurav.setEmployeeId(10111L);
 		Mockito.when(employeeRepository.findById(10111L)).thenReturn(Optional.of(gaurav));
 	}
