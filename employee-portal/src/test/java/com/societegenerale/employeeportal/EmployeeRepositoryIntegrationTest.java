@@ -13,7 +13,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.societegenerale.employeeportal.entity.Employee;
-import com.societegenerale.employeeportal.entity.Sex;
 import com.societegenerale.employeeportal.repository.EmployeeRepository;
 
 @RunWith(SpringRunner.class)
@@ -29,7 +28,7 @@ public class EmployeeRepositoryIntegrationTest {
     @Test
     public void whenFindByID_thenReturnEmployee() {
         // given
-        Employee gaurav = new Employee("Gaurav", "Upadhyay",Sex.MALE, new Date(System.currentTimeMillis()),"IT");
+        Employee gaurav = new Employee("Gaurav", "Upadhyay","MALE", new Date(System.currentTimeMillis()),"IT");
         gaurav = entityManager.persist(gaurav);
         entityManager.flush();
      
