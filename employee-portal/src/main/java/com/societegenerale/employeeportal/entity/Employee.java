@@ -23,7 +23,7 @@ public class Employee {
 	private String lastName;
 	
 	@Column(name = "sex")
-	private Sex sex;
+	private String sex;
 	
 	@Column(name = "date_of_birth", nullable = false, updatable = false)
 	private Date dateOfBirth;
@@ -31,7 +31,7 @@ public class Employee {
 	@Column(name = "department")
 	private String department;
 
-	public Employee(String firstName, String lastName, Sex sex, Date dateOfBirth, String department) {
+	public Employee(String firstName, String lastName, String sex, Date dateOfBirth, String department) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -68,11 +68,11 @@ public class Employee {
 		this.lastName = lastName;
 	}
 
-	public Sex getSex() {
+	public String getSex() {
 		return sex;
 	}
 
-	public void setSex(Sex sex) {
+	public void setSex(String sex) {
 		this.sex = sex;
 	}
 
